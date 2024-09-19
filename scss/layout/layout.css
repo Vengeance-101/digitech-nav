@@ -1,0 +1,84 @@
+@import "lenis/dist/lenis.css";
+button {
+  outline: none;
+}
+
+.sign-in {
+  position: relative;
+}
+.sign-in::after {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  content: "";
+  background: #a5adba;
+  top: 0;
+  left: 0;
+}
+
+li {
+  transition: all 300ms ease-in-out;
+}
+li:hover .anchor-links {
+  color: red;
+}
+
+.white-background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 100%;
+  left: 0;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.453);
+  transition: all 200ms ease-in-out;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.productsMenu {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in-out;
+  width: 60%;
+}
+
+li:hover .productsMenu {
+  opacity: 1;
+  pointer-events: all;
+}
+
+li:hover .arrow {
+  transform: rotate(-180deg);
+}
+
+.sublink-anchor {
+  transition: all 300ms ease-in-out;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+}
+
+.all-products .rightArrow {
+  transition: all 300ms ease-in-out;
+}
+.all-products:hover .rightArrow {
+  transform: translateX(40%);
+}
+
+.categoryLink {
+  transition: all 300ms ease-in-out;
+}
+
+.categoryLink:hover .category-icon {
+  background: #F0F1F2;
+}
+
+.categoryLink:hover .category-tags .category-main-tag {
+  color: red;
+  gap: 0.8rem;
+}/*# sourceMappingURL=layout.css.map */
