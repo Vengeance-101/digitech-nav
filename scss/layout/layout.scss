@@ -2,6 +2,14 @@ button{
   outline: none;
   
 }
+body {
+  @apply bg-gray-100 text-gray-900;
+}
+
+.loading-counter {
+  @apply text-5xl font-bold;
+}
+
 @import "lenis/dist/lenis.css";
 
 @import "../module/header"

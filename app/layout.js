@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-
+import LoadingWrapper from "@/components/loadingScreen/LoadingWrapper";
 const charlie = localFont({
   src: [
     {
@@ -19,7 +19,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${charlie.variable}  antialiased`}>{children}</body>
+      <body className={`${charlie.variable}  antialiased`}>
+        <LoadingWrapper>{children}</LoadingWrapper>
+      </body>
     </html>
   );
 }
