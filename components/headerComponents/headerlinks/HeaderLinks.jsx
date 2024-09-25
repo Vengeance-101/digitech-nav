@@ -8,6 +8,7 @@ const HeaderLinks = ({
   mouseLeave,
   handleActiveLink,
   activeSub,
+  isScrolled,
 }) => {
   const navlink = [
     { title: "Home" },
@@ -24,14 +25,16 @@ const HeaderLinks = ({
           <li key={links.title}>
             <button
               href="#"
-              className={`text-[#253858] flex items-center gap-2  py-6 px-4 anchor-links  ${links.title} `}
+              className={`flex items-center gap-2 py-6 px-4 anchor-links transition-colors duration-300 ease-in-out ${
+                isScrolled ? "text-white" : "text-[#253858]"
+              }`}
               key={links.title}
               id={links.title}
               onMouseEnter={mouseEnter}
               onMouseLeave={mouseLeave}
             >
               {links.title}
-              <PiCaretDownDuotone className="arrow transition-all duration-300 ease-in-out" />
+              <PiCaretDownDuotone className="arrow transition-transform duration-500 ease-in-out" />
             </button>
             {links.title == "Services" && (
               <ProductsMenu
@@ -46,7 +49,9 @@ const HeaderLinks = ({
       })}
       <Link
         href="#"
-        className="text-[#253858]  py-6 px-5 Enterprise-link hover:text-[red] transition-all duration-300 ease-in-out"
+        className={`${
+          isScrolled ? "text-white" : "text-[#253858] "
+        }  py-6 px-5 Enterprise-link hover:text-[red] transition-all duration-300 ease-in-out`}
       >
         Contact
       </Link>

@@ -5,7 +5,7 @@ import React from "react";
 const Sublink = ({ title }) => {
   return (
     <div
-      className={`absolute h-full px-14 py-12 w-full top-0  grid grid-cols-2  grid-rows-6 gap-2 right-0`}
+      className={`absolute bg-white h-full px-14 py-12 w-full top-0  grid grid-cols-2  grid-rows-6 gap-2 right-0`}
     >
       {servicesData.map((category) => {
         if (category.Sublink == title) {

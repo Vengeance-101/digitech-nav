@@ -1,7 +1,8 @@
 "use client";
 import Banner from "@/components/banner/Banner";
 import Collabrate from "@/components/collabrate/Collabrate";
-import Header from "@/components/header/Header";
+import Header from "@/components/headerComponents/Header";
+import Navbar from "@/components/navbar/Navbar";
 import PowerFull from "@/components/powerful/PowerFull";
 import Lenis from "lenis";
 import { useEffect } from "react/";
@@ -35,7 +36,9 @@ export default function Home() {
 
   return (
     <div className="font-charlie">
-      <Header></Header>
+      <Navbar>
+        <Header></Header>
+      </Navbar>
       <Banner />
       <PowerFull />
       <Collabrate />

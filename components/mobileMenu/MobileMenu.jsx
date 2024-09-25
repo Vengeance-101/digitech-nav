@@ -1,6 +1,6 @@
 import React from "react";
-import MobileSublink from "../header/headerlinks/ProductsMenu/sublinks/MobileSublink";
-import MobileMain from "../header/headerlinks/ProductsMenu/MobileMain";
+import MobileSublink from "../headerComponents/headerlinks/ProductsMenu/sublinks/MobileSublink";
+import MobileMain from "../headerComponents/headerlinks/ProductsMenu/MobileMain";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 const MobileMenu = ({
