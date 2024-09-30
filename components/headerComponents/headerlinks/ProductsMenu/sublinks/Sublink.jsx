@@ -7,25 +7,27 @@ const Sublink = () => {
 
   return (
     <div
-      className={`absolute bg-white h-full px-14 py-12 w-full top-0  grid grid-cols-2  grid-rows-6 gap-2 right-0`}
+      className={`absolute bg-white h-full  flex items-center justify-center px-14 py-12 w-full top-0 right-0`}
     >
-      {servicesData.map((category) => {
-        if (category.Sublink == activeSub) {
-          return (
-            <div
-              key={category.title}
-              className="flex gap-4 cursor-pointer categoryLink"
-            >
-              <button className=" border-none outline-none py-1 category-tags">
-                <h1 className="text-sm text-black flex items-center justify-start gap-2 category-main-tag transition-all duration-300 ease-in-out">
-                  {category.title}
-                  <FaArrowRightLong className="text-[red] " />
-                </h1>
-              </button>
-            </div>
-          );
-        }
-      })}
+      <div className=" grid grid-cols-2  w-full h-full  grid-rows-6 gap-5 ">
+        {servicesData.map((category) => {
+          if (category.Sublink == activeSub) {
+            return (
+              <div
+                key={category.title}
+                className="flex   justify-center cursor-pointer categoryLink"
+              >
+                <button className=" border-none outline-none py-1 category-tags">
+                  <h1 className="text-lg text-black flex items-center justify-start gap-2 category-main-tag transition-all duration-300 ease-in-out">
+                    {category.title}
+                    <FaArrowRightLong className="text-[red] " />
+                  </h1>
+                </button>
+              </div>
+            );
+          }
+        })}
+      </div>
     </div>
   );
 };
