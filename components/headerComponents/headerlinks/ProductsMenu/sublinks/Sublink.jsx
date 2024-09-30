@@ -1,14 +1,16 @@
 import { servicesData } from "@/data/headerdata/ProductMenuData";
 import { FaArrowRightLong } from "react-icons/fa6";
-
 import React from "react";
-const Sublink = ({ title }) => {
+import { useData } from "@/utils/context/StateContext";
+const Sublink = () => {
+  const { activeSub } = useData();
+
   return (
     <div
       className={`absolute bg-white h-full px-14 py-12 w-full top-0  grid grid-cols-2  grid-rows-6 gap-2 right-0`}
     >
       {servicesData.map((category) => {
-        if (category.Sublink == title) {
+        if (category.Sublink == activeSub) {
           return (
             <div
               key={category.title}

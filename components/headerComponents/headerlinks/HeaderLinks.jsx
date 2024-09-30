@@ -3,13 +3,9 @@ import Link from "next/link";
 import React from "react";
 import ProductsMenu from "./ProductsMenu/ProductsMenu";
 import { PiCaretDownDuotone } from "react-icons/pi";
-const HeaderLinks = ({
-  mouseEnter,
-  mouseLeave,
-  handleActiveLink,
-  activeSub,
-  isScrolled,
-}) => {
+import { useData } from "@/utils/context/StateContext";
+const HeaderLinks = () => {
+  const { isScrolled } = useData();
   const navlink = [
     { title: "Home" },
     { title: "Pages" },
@@ -30,20 +26,11 @@ const HeaderLinks = ({
               }`}
               key={links.title}
               id={links.title}
-              onMouseEnter={mouseEnter}
-              onMouseLeave={mouseLeave}
             >
               {links.title}
               <PiCaretDownDuotone className="arrow transition-transform duration-500 ease-in-out" />
             </button>
-            {links.title == "Services" && (
-              <ProductsMenu
-                mouseEnter={mouseEnter}
-                mouseLeave={mouseLeave}
-                handleActiveLink={handleActiveLink}
-                activeSub={activeSub}
-              />
-            )}
+            {links.title == "Services" && <ProductsMenu />}
           </li>
         );
       })}

@@ -1,5 +1,8 @@
+import { useData } from "@/utils/context/StateContext";
 import React from "react";
-const Consultant = ({ isScrolled }) => {
+
+const Consultant = () => {
+  const { isScrolled } = useData();
   return (
     <div className="max-md:hidden">
       <button

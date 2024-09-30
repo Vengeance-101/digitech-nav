@@ -3,12 +3,11 @@ import Link from "next/link";
 import React from "react";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import Sublink from "./sublinks/Sublink";
-const ProductsMenu = ({
-  mouseEnter,
-  mouseLeave,
-  handleActiveLink,
-  activeSub,
-}) => {
+import { useData } from "@/utils/context/StateContext";
+
+const ProductsMenu = () => {
+  const { handleActiveLink, activeSub } = useData();
+
   // -------------------------------------------------
   const sublinks = [
     { title: "Development Training" },
@@ -22,11 +21,7 @@ const ProductsMenu = ({
   const active = true;
 
   return (
-    <div
-      className="absolute productsMenu w-full  bg-red-500 top-[100%] -translate-x-1/2 left-[50%]   z-[99]"
-      onMouseEnter={mouseEnter}
-      onMouseLeave={mouseLeave}
-    >
+    <div className="absolute productsMenu w-full  bg-red-500 top-[100%] -translate-x-1/2 left-[50%]   z-[99]">
       <div className="container mx-auto px-11">
         <div className="w-[65%]  mx-auto py-1"></div>
         <div
