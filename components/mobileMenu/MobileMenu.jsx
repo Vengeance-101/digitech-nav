@@ -10,13 +10,13 @@ const MobileMenu = () => {
     <div
       className={`absolute transition-all duration-300 ease-in-out z-50 top-[100%] ${
         toggle ? "right-3 max-sm:right-0" : "right-[-38%] max-sm:right-[-100%]"
-      } max-xl:w-[36%] max-lg:w-[38%] max-md:w-[38%] max-sm:w-full h-auto sm:py-2 ${
+      } max-xl:w-[36%] max-lg:w-[38%] max-md:w-[38%] max-sm:w-[90dvw] h-auto  max-sm:h-[100dvh] sm:py-2 ${
         !toggle
           ? " opacity-0 pointer-events-none"
           : "  opacity-100 pointer-events-auto"
       }  block xl:hidden  `}
     >
-      <div className="bg-white   border-4 border-gray-400 w-full h-full relative overflow-hidden px-3 shadow-2xl py-10 rounded-2xl max-sm:rounded-none">
+      <div className="bg-white border-none  md:border-4 border-gray-400 w-full h-full relative overflow-hidden px-3 shadow-2xl py-10 rounded-2xl max-sm:rounded-none">
         <div
           className={`transition-all duration-300 ease-in-out w-full ${
             slider ? "-translate-x-[105%]" : "translate-x-0"

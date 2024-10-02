@@ -63,10 +63,10 @@ const Header = () => {
           <Consultant />
           <ToggleBtn />
         </div>
+        <MobileMenu />
       </nav>
 
       {/* Mobile Menu */}
-      <MobileMenu />
     </header>
   );
 };
