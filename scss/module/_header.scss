@@ -78,3 +78,9 @@ li:hover .productsMenu {
   color: red;
   gap: .8rem;
 }
+.d-shape-1{
+  clip-path: polygon(0 0, 90% 0%, 100% 100%, 0% 100%);
+}
+.d-shape-2{
+  clip-path: polygon(0 0, 91.5% 0%, 100% 100%, 0% 100%);
+}

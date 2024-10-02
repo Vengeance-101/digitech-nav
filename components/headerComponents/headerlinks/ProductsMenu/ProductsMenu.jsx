@@ -18,9 +18,9 @@ const ProductsMenu = () => {
 
   return (
     <div className="absolute productsMenu w-full bg-red-500 top-full -translate-x-1/2 left-1/2 z-99">
-      <div className="container mx-auto h-full py-5 px-11">
+      <div className="container mx-auto h-full py-5 2xl:px-[11rem] lg:px-6  px-5  ">
         <div
-          className="w-[65%] h-auto mx-auto product_content border-2 border-black overflow-hidden bg-black rounded-2xl flex"
+          className="w-[80%] h-auto mx-auto product_content border-2 border-black overflow-hidden bg-black rounded-2xl flex"
           title={activeSub}
         >
           <div className="main-products flex w-full h-auto">

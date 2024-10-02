@@ -89,4 +89,14 @@ li:hover .arrow {
 .categoryLink:hover .category-tags .category-main-tag {
   color: red;
   gap: 0.8rem;
+}
+
+.d-shape-1 {
+  -webkit-clip-path: polygon(0 0, 90% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.d-shape-2 {
+  -webkit-clip-path: polygon(0 0, 91.5% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 91.5% 0%, 100% 100%, 0% 100%);
 }/*# sourceMappingURL=layout.css.map */

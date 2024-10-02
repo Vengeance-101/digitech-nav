@@ -1,4 +1,5 @@
 "use client";
+import Banner from "@/components/Banner/Banner";
 import Header from "@/components/headerComponents/Header";
 import { StateProvider } from "@/utils/context/StateContext";
 import Lenis from "lenis";
@@ -32,10 +33,11 @@ export default function Home() {
   });
 
   return (
-    <StateProvider>
-      <div className="font-charlie h-auto w-full">
+    <div className="font-charlie h-auto w-full">
+      <StateProvider>
         <Header />
-      </div>
-    </StateProvider>
+      </StateProvider>
+      <Banner />
+    </div>
   );
 }

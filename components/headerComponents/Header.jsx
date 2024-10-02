@@ -6,8 +6,9 @@ import MobileMenu from "../mobileMenu/MobileMenu";
 import Consultant from "./searchLogin/Consultant";
 import ToggleBtn from "./toggleBtn/ToggleBtn";
 import { useData } from "@/utils/context/StateContext";
-import compLogo from "../../public/company_logo/logo.svg";
-
+import { CompanyLogo } from "@/utils/media/MediaImport";
+import HeaderContacts from "./headercontacts/HeaderContacts";
+import Diagonal from "./Diagonal/Diagonal";
 const Header = () => {
   const { isScrolled, setIsScrolled } = useData();
 
@@ -23,26 +24,37 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
-        isScrolled ? "bg-black" : "bg-white"
-      }`}
+        isScrolled ? "bg-white" : "bg-[#00000082]"
+      } backdrop-blur-[8px]  border-b-2  border-gray-800  shadow-xl max-xl:bg-white `}
     >
+      {/* diagonal shapes */}
+
+      <div className=" block max-xl:hidden">
+        <Diagonal />
+      </div>
+
+      {/* header-contacts */}
+      <HeaderContacts />
       <nav
-        className={`container mx-auto flex justify-between items-center px-[11rem] max-xl:px-10 max-lg:px-5 text-2xl`}
+        className={`container w-full    mx-auto flex     justify-between     items-center 2xl:px-[11rem] lg:px-6  max-xl:py-3 px-5 text-2xl`}
       >
         {/* Logo */}
-        <div>
+        <div
+          className={`max-xl:w-44    max-md:w-32 ${
+            isScrolled ? "opacity-100" : "opacity-0"
+          } max-xl:opacity-100 transition-all duration-300 ease-in-out `}
+        >
           <Image
-            src={compLogo}
+            src={CompanyLogo}
             alt="Company Logo"
             width={185}
             height={100}
             priority
-            className="max-xl:w-44"
           />
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden   xl:block">
+        <div className="hidden     xl:block">
           <HeaderLinks />
         </div>
 

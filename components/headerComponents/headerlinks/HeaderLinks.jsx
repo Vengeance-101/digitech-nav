@@ -22,7 +22,7 @@ const HeaderLinks = () => {
             <button
               href="#"
               className={`flex items-center gap-2 py-6 px-4 anchor-links transition-colors duration-300 ease-in-out ${
-                isScrolled ? "text-white" : "text-[#253858]"
+                isScrolled ? "text-[#253858]" : "text-white"
               }`}
               key={links.title}
               id={links.title}
@@ -37,7 +37,7 @@ const HeaderLinks = () => {
       <Link
         href="#"
         className={`${
-          isScrolled ? "text-white" : "text-[#253858] "
+          isScrolled ? "text-[#253858]" : "text-white"
         }  py-6 px-5 Enterprise-link hover:text-[red] transition-all duration-300 ease-in-out`}
       >
         Contact
